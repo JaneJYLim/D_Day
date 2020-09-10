@@ -1,8 +1,6 @@
 const form = document.querySelector(".js-form"),
     input = document.querySelector("input"),
     greeting = document.querySelector(".js-greetings");
-    //querySelector : 해당하는 것 중 첫번째만 가져옴.
-    //querySelectorAll : 해당하는 것들을 다 가져옴.
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -31,7 +29,7 @@ function paintGreeting(text) {
 
 function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
-    if(currentUser === null) {  
+    if (currentUser === null) {
         askForName();
     } else {
         paintGreeting(currentUser);
